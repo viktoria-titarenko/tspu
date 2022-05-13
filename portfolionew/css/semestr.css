@@ -1,0 +1,18 @@
+.semestr{
+    margin-top: 20px;
+    color: black!important;
+    border-radius: 15px;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+.button{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.course{
+    color: black!important;
+    border-radius: 15px;
+    font-family: 'Roboto';
+    font-size: 25px;
+}

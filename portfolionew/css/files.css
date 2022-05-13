@@ -1,0 +1,18 @@
+.files{
+    color: black!important;
+    border-radius: 15px;
+    font-family: 'Roboto';
+    font-size: 30px;
+}
+tr:hover {
+    background-color: #cfe2ff;
+}
+.tableFile{
+    display: flex;
+}
+
+.flexJustifyBottom {
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: space-between; */
+}

@@ -1,0 +1,11 @@
+.lessons{
+    color: black!important;
+    border-radius: 15px;
+    font-family: 'Roboto';
+    font-size: 30px;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

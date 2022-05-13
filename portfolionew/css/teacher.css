@@ -1,0 +1,10 @@
+.teacher{
+    color: black!important;
+    border-radius: 15px;
+    font-family: 'Roboto';
+    font-size: 30px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
