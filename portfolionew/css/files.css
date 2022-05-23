@@ -16,3 +16,8 @@ tr:hover {
     align-items: flex-end;
     /* justify-content: space-between; */
 }
+.block1{
+    border-bottom: black solid 1px!important;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}

@@ -4,3 +4,8 @@
     font-family: 'Roboto';
     font-size: 30px;
 }
+.block1{
+    border-bottom: black solid 1px!important;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}

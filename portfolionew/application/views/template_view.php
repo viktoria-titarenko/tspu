@@ -12,29 +12,66 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Портфолио</title>
+  <style>
+      .elem a:hover{
+        background-color:rgb(63, 54, 192);
+      }
+  </style>
 </head>
 <body>
 <nav class="no-print navbar navabr-expand-lg navbar-dark bg-dark mb-4">
     <div class="container container-fluid">
     <div style="display: flex; align-items: baseline">
-    <a class = "navbr" href="/portfolionew/authorization">
+    
+    <?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/profilestudent") || ($_SERVER['REQUEST_URI'] == "/portfolionew/progress") || ($_SERVER['REQUEST_URI'] == "/portfolionew/semestr") ||  ($_SERVER['REQUEST_URI'] == "/portfolionew/lessons") ||($_SERVER['REQUEST_URI'] == "/portfolionew/files")  ){?>
+        <a class = "navbr" href="/portfolionew/profilestudent">
         <img src="https://local.tspu.edu.ru/portal/img/logoH39.png" class = 
     "image">
      Портфолио 
-    </a>
+     </a>
+     <?php
+        };
+        ?>
+<?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/authorization") || ($_SERVER['REQUEST_URI'] == "/portfolionew/support")  ){?>
+    <a class = "navbr" href="/portfolionew/authorization" >
+        <img src="https://local.tspu.edu.ru/portal/img/logoH39.png" class = 
+    "image">
+     Портфолио 
+     </a>
+     <?php
+        };
+        ?>    
+<?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/profileteacher") || ($_SERVER['REQUEST_URI'] == "/portfolionew/teacherLessons") || ($_SERVER['REQUEST_URI'] == "/portfolionew/group") ||  ($_SERVER['REQUEST_URI'] == "/portfolionew/studentfromteacher") ||($_SERVER['REQUEST_URI'] == "/portfolionew/filesforteacher")  ){?>
+        <a class = "navbr" href="/portfolionew/profileteacher">
+        <img src="https://local.tspu.edu.ru/portal/img/logoH39.png" class = 
+    "image">
+     Портфолио 
+     </a>
+     <?php
+        };
+        ?>    
+    
     
     </div>
     <div  class="elem" >
     <div style="display: flex; flex-direction: row;" >
-             <a class="nav-link active elem" arria-current="page" href="/portfolionew/semestr">Загрузить файлы</a>
-            <a class="nav-link active elem" arria-current="page" href="/portfolionew/progress">Успеваемость</a>
-      
-           
+        <?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/profilestudent") || ($_SERVER['REQUEST_URI'] == "/portfolionew/progress") || ($_SERVER['REQUEST_URI'] == "/portfolionew/semestr") ||  ($_SERVER['REQUEST_URI'] == "/portfolionew/lessons") ||($_SERVER['REQUEST_URI'] == "/portfolionew/files")  ){?>
+            <a class="nav-link active elem" arria-current="page" href="/portfolionew/semestr">Загрузить файлы</a>
+            <a class="nav-link active elem" arria-current="page" href="/portfolionew/progress">Успеваемость</a><?php
+        };
+        ?>
+        
          <?php if ($_SERVER['REQUEST_URI'] == "/portfolionew/profileteacher") {?>
             <a class="nav-link active elem" arria-current="page" href="/portfolionew/teacherLessons ">Просмотреть файлы</a><?php
         };
         ?>
         <a class="nav-link active elem" arria-current="page" href="/portfolionew/support ">Поддержка</a>
+
+        <?php if (($_SERVER['REQUEST_URI'] != "/portfolionew/authorization" )&& ($_SERVER['REQUEST_URI'] != "/portfolionew/support" )){?>
+            <a class="nav-link active elem" arria-current="page" href="/portfolionew/authorization ">Выход</a><?php
+        };
+        ?>
+
    
 </div>
 </nav>

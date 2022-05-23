@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/portfolionew/css/files.css">
 <div id="app" data-app>
     <div class="files">
-    <p>Загрузка и просмотр загруженных ранее файлов</p>
+    <p class="block1">Загрузка и просмотр загруженных ранее файлов</p>
 </div>
     <div class="flexJustifyBottom">
         <div style="width: 693px">

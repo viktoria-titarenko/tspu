@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/portfolionew/css/files.css">
 <div id="app" data-app>
     <div class="files">
-    <p>Просмотр загруженных файлов</p>
+    <p class="block1">Просмотр загруженных файлов</p>
     </div>
         <div class="tableFile">
             <table class="table table-hover " style="border-color: white;">

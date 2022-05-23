@@ -29,11 +29,12 @@ new Vue({
                 if (data.notification == true){
                     this.notification = true;
                 this.notificationText = data.text;
+                this.text = "";
+                this.subject = "";
                 return;}
                    
             });
-            this.text = "";
-            this.subject = "";
+          
         },
         redirect(e) {
             let studentId = e.target.getAttribute('data-id');

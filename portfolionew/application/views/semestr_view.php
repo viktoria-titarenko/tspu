@@ -9,8 +9,9 @@
         </button>
   </div> -->
     <div class="semestr">
-        <p> Выбор семестра для загрузки файлов </p>
+        <p class="block1"> Выбор семестра для загрузки файлов </p>
     </div> 
+   
     <div class="_flexWrap _flexGap10">
     <v-menu offset-y v-for="course in coursesCount">
       <template v-slot:activator="{ on, attrs }">
