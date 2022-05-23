@@ -26,16 +26,10 @@
     </div>
     <div  class="elem" >
     <div style="display: flex; flex-direction: row;" >
-        <?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/profilestudent") ){?>
-            <a class="nav-link active elem" arria-current="page" href="/portfolionew/semestr">Загрузить файлы</a>
-            <a class="nav-link active elem" arria-current="page" href="/portfolionew/progress">Успеваемость</a><?php
-        };
-        ?>
-        <?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/progress") ||($_SERVER['REQUEST_URI'] == "/portfolionew/files") ||($_SERVER['REQUEST_URI'] == "/portfolionew/semestr")||($_SERVER['REQUEST_URI'] == "/portfolionew/lessons")){?>
-            <a class="nav-link active elem" arria-current="page" href="/portfolionew/profilestudent">Профиль</a>
-            <?php
-        };
-        ?>
+             <a class="nav-link active elem" arria-current="page" href="/portfolionew/semestr">Загрузить файлы</a>
+            <a class="nav-link active elem" arria-current="page" href="/portfolionew/progress">Успеваемость</a>
+      
+           
          <?php if ($_SERVER['REQUEST_URI'] == "/portfolionew/profileteacher") {?>
             <a class="nav-link active elem" arria-current="page" href="/portfolionew/teacherLessons ">Просмотреть файлы</a><?php
         };
