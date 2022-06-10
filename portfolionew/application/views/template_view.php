@@ -32,7 +32,7 @@
      <?php
         };
         ?>
-<?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/authorization") || ($_SERVER['REQUEST_URI'] == "/portfolionew/support")  ){?>
+<?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/authorization")){?>
     <a class = "navbr" href="/portfolionew/authorization" >
         <img src="https://local.tspu.edu.ru/portal/img/logoH39.png" class = 
     "image">
@@ -40,7 +40,20 @@
      </a>
      <?php
         };
-        ?>    
+        ?>  
+        
+        <?php if ( ($_SERVER['REQUEST_URI'] == "/portfolionew/support")  ){?>
+            <a id="st" class = "navbr"  >
+                <img src="https://local.tspu.edu.ru/portal/img/logoH39.png" class = 
+            "image">
+             Портфолио 
+             </a>
+           
+            
+             <?php
+                };
+                ?>    
+
 <?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/profileteacher") || ($_SERVER['REQUEST_URI'] == "/portfolionew/teacherLessons") || ($_SERVER['REQUEST_URI'] == "/portfolionew/group") ||  ($_SERVER['REQUEST_URI'] == "/portfolionew/studentfromteacher") ||($_SERVER['REQUEST_URI'] == "/portfolionew/filesforteacher")  ){?>
         <a class = "navbr" href="/portfolionew/profileteacher">
         <img src="https://local.tspu.edu.ru/portal/img/logoH39.png" class = 
@@ -57,20 +70,33 @@
     <div style="display: flex; flex-direction: row;" >
         <?php if (($_SERVER['REQUEST_URI'] == "/portfolionew/profilestudent") || ($_SERVER['REQUEST_URI'] == "/portfolionew/progress") || ($_SERVER['REQUEST_URI'] == "/portfolionew/semestr") ||  ($_SERVER['REQUEST_URI'] == "/portfolionew/lessons") ||($_SERVER['REQUEST_URI'] == "/portfolionew/files")  ){?>
             <a class="nav-link active elem" arria-current="page" href="/portfolionew/semestr">Загрузить файлы</a>
-            <a class="nav-link active elem" arria-current="page" href="/portfolionew/progress">Успеваемость</a><?php
+            <a class="nav-link active elem" arria-current="page" href="/portfolionew/progress">Успеваемость</a>
+            <?php
         };
         ?>
         
          <?php if ($_SERVER['REQUEST_URI'] == "/portfolionew/profileteacher") {?>
-            <a class="nav-link active elem" arria-current="page" href="/portfolionew/teacherLessons ">Просмотреть файлы</a><?php
+            <a class="nav-link active elem" arria-current="page" href="/portfolionew/teacherLessons ">Просмотреть файлы</a>
+            <?php
         };
         ?>
         <a class="nav-link active elem" arria-current="page" href="/portfolionew/support ">Поддержка</a>
 
         <?php if (($_SERVER['REQUEST_URI'] != "/portfolionew/authorization" )&& ($_SERVER['REQUEST_URI'] != "/portfolionew/support" )){?>
-            <a class="nav-link active elem" arria-current="page" href="/portfolionew/authorization ">Выход</a><?php
+            <a class="nav-link active elem" id="id" arria-current="page" href="/portfolionew/authorization ">Выход</a><?php
         };
         ?>
+        <script>
+            
+                document.getElementById('id').onclick = () => {
+                    window.localStorage.clear();
+                    
+
+                
+                
+            }
+            
+        </script>
 
    
 </div>
@@ -78,5 +104,15 @@
         <div class="_container">
             <?php include 'application/views/'.$content_view; ?>
         </div>
+        <script>
+             let position =  window.localStorage.getItem("position");
+             let st = document.getElementById("st");
+                if(position==1){
+                   st.href = "/portfolionew/profilestudent";
+                }
+                else{  
+                    st.href = "/portfolionew/profileteacher";
+                }
+        </script>
 </body>
 </html>

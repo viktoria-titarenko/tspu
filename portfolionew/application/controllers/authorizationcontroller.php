@@ -6,8 +6,12 @@ class authorizationcontroller extends Controller {
        $this -> view -> generate('authorization_view.php','template_view.php');
     }
 
-    public function listjson_action() {
+  /*   public function listjson_action() {
         $authorization = new authorization_model();
         $authorization->list();
+    } */
+    public function getstudent_action() {
+        $authorization = new authorization_model();
+        $authorization->getstudent();
     }
 }

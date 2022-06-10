@@ -52,13 +52,7 @@ new Vue({
                     this.lessonsemester2.push(this.lessons[i]);
                 }
             }
-            for (var i=0; i < this.lessons.length; i++ ){
-                if ((this.lessons[i].mark_name == "зачтено") || (this.lessons[i].mark_name == "не выбрано")|| (this.lessons[i].mark_name == "не зачтено")){
-                this.lessons[i].marks = "Зачёт: ";
-                } else{
-                    this.lessons[i].marks = "Экзамен: ";
-                }
-            }
+            
             if (this.lessonsemester1.length != 0){
                 
                 this.table1= true;

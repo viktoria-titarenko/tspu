@@ -21,7 +21,7 @@
                 <th  style="text-align: center;"scope="col">Осенний семестр</th>
                 <tr class="mytable" v-for="lesson in lessonsemester1">
                     <td class="td"> <ins>{{ lesson.discipline }}</ins></td>
-                    <td class="tdd" v-bind:class="{ red:(lesson.mark_name == 'не явился' || (lesson.mark_name == 'не зачтено')), green: (lesson.mark_name == 'отлично' || (lesson.mark_name == 'хорошо') || (lesson.mark_name == 'удовлетв.') || (lesson.mark_name == 'зачтено')) }">{{lesson.marks}} <ins>{{ lesson.mark_name }}</ins></td>
+                    <td class="tdd" v-bind:class="{ red:(lesson.mark_name == 'не явился' || (lesson.mark_name == 'не зачтено')), green: (lesson.mark_name == 'отлично' || (lesson.mark_name == 'хорошо') || (lesson.mark_name == 'удовлетв.') || (lesson.mark_name == 'зачтено')) }">{{lesson.view}} <ins>{{ lesson.mark_name }}</ins></td>
                    
                 </tr>
             </table>
@@ -32,7 +32,7 @@
                 <th  style="text-align: center;"scope="col">Весенний семестр</th>
                 <tr class="mytable" v-for="lesson in lessonsemester2">
                     <td class="td"><ins>{{ lesson.discipline }}</ins></td>
-                    <td class="tdd" v-bind:class="{ red:((lesson.mark_name == 'не явился') || (lesson.mark_name == 'не зачтено')), green: (lesson.mark_name == 'отлично' || (lesson.mark_name == 'хорошо') || (lesson.mark_name == 'удовлетв.') || (lesson.mark_name == 'зачтено')) }">{{lesson.marks}} <ins>{{ lesson.mark_name }}</ins></td>
+                    <td class="tdd" v-bind:class="{ red:((lesson.mark_name == 'не явился') || (lesson.mark_name == 'не зачтено')), green: (lesson.mark_name == 'отлично' || (lesson.mark_name == 'хорошо') || (lesson.mark_name == 'удовлетв.') || (lesson.mark_name == 'зачтено')) }">{{lesson.view}} <ins>{{ lesson.mark_name }}</ins></td>
                    
                 </tr>
             </table>
